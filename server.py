@@ -7,12 +7,6 @@ def page(pagename):
 @app.route('/')
 def index():
 	return render_template('index.html')
-def writee(data):
-	with open('database.txt',mode='a') as datab:
-		email=data["email"]
-		subject=data["subject"]
-		message=data["message"]
-		file=datab.write(f'\n{email},{subject},{message}')
 def write_csv(data):
 	with open('database.csv',newline='',mode='a') as datab:
 		email=data["email"]
